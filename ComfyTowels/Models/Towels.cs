@@ -14,7 +14,7 @@ public class Towels
 
     [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
     [Required]
-    [StringLength(30)]
+    [StringLength(350)]
     public string? Size { get; set; }
     public string? Color { get; set; }
 

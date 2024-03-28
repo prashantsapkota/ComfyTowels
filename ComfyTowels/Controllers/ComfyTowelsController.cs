@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ComfyTowels.Data;
 using ComfyTowels.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ComfyTowels.Controllers
 {
@@ -20,6 +21,7 @@ namespace ComfyTowels.Controllers
         }
 
         // GET: ComfyTowels
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Towels.ToListAsync());
